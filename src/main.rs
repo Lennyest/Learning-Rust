@@ -276,8 +276,117 @@ fn main() {
     let test_statement = plus_one(5); // We can do this because the function returns a value.
     println!("{test_statement}");
 
+    // Conditional Statement
+    let number = 3;
 
-    // Continue from here: https://doc.rust-lang.org/book/ch03-05-control-flow.html
+    // Single if
+    if number < 5 {
+        println!("True!");
+    } else {
+        println!("False.");
+    }
+
+    // Else if
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+
+    // Conditions in a statement, remember the lack of semi colon !
+    let condition = true;
+    let number = if condition { 5 } else { 6 };
+    println!("{number}");
+    // You have to use types that are compatible for both return types.
+
+    // **Loops**
+    /*
+        Types: loop, while and for
+        This will run until we explicitly stop it. You can break out of it with the 'break' keyword as well as 'continue' to continue.
+        This loop will run once then stop.
+        
+        Break and continue applies to the innermost loop at the current point. You can assign a loop label to specifically break or continue
+        a specific loop.
+
+        Labels must begin with a single quote. Ex:
+                    'example_loop
+    */
+    loop {
+        println!("ran!");
+        break;
+    }
+
+    // Returning values from a loop using break.
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("{result}");
+
+    // Loops with labels:
+    let mut counter = 0;
+    'loop_label: loop {
+        println!("{counter}");
+
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining - {remaining}");
+
+            if remaining == 0 {
+                break;
+            }
+
+            if counter == 2 
+            {
+                // Breaking the outer loop using the label.
+                break 'loop_label;
+            }
+
+            remaining -= 1;
+        }
+
+        counter += 1;
+    }
+
+    println!("End count: {counter}");
 
 
+    // While loop
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}");
+        number -= 1;
+    }
+    
+    //Looping through a collection with for
+
+    let array = [10, 20, 30, 40, 50];
+    let mut index = 0;
+    while index < 5 {
+        println!("value: {}", array[index]);
+        index += 1;
+    }
+
+    // item iterator for loop
+    for element in array {
+        println!("element: {element}");
+    }
+
+    // Reversing
+    for number in (1..4).rev() {
+        println!("{number}");
+    }
+
+    // Chapter 3 complete!
 }
