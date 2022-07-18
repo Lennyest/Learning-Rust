@@ -1,9 +1,8 @@
 ![Logo](https://i.imgur.com/Iniykw5.png)
 
-# What is this?
+# What is this? 🤔
 
 This is a simple cheat sheet for the Rust Documentation that has been simplified a lot for easy referencing.
-
 There are some missing pages now, but the rest will be added as I go through, this is mostly for my own learning.
 
 ## 🦀 Full credits to the original creators of the Rust documentation, Steve Klabnik and Carol Nichols.
