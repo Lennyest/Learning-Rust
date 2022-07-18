@@ -1,4 +1,4 @@
-![Rust logo]([https://raw.github.com/adam-p/markdown-here/master/src/common/images/icon48.png](https://i.imgur.com/Iniykw5.png))
+![Logo](https://i.imgur.com/Iniykw5.png)
 
 # What is this?
 
